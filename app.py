@@ -31,7 +31,7 @@ load_dotenv()
 API_KEY = os.getenv('API_KEY')
 
 #mongodb atlas client
-client = pymongo.MongoClient(f"mongodb+srv://{MONGODB_USERNAME}:{MONGODB_PASSWORD}@cluster0.k7ecz.mongodb.net/{MONGODB_DBNAME}?retryWrites=true&w=majority")
+client = MongoClient(f"mongodb+srv://{MONGODB_USERNAME}:{MONGODB_PASSWORD}@cluster0.k7ecz.mongodb.net/{MONGODB_DBNAME}?retryWrites=true&w=majority")
 db = client.test
 
 # Settings for image endpoint
